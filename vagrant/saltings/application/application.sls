@@ -28,9 +28,8 @@ venv_ownership:
             - group
             - mode
 
-secrets:
+{{ SECRETS_LOCATION }}:
   file:
-    - name: {{ SECRETS_LOCATION }}
     - managed
     - user: ladder
     - group: ladder
