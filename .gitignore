@@ -1,0 +1,13 @@
+# Emacs
+*~
+\#*
+.\#*
+# Untracked folders
+migrations
+node-modules
+# Vagrant
+.vagrant/
+# Python
+*.pyc
+.vm_venv/venv
+secrets
