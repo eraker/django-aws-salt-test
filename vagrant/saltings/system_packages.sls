@@ -7,7 +7,6 @@ packages:
             - libbz2-dev
             - libffi-dev
             - libxml2-dev
-            - libssl-dev
             - openssl
             - git-all
             - emacs24-nox

@@ -10,4 +10,4 @@ node-modules
 # Python
 *.pyc
 .vm_venv/venv
-secrets
+secrets*

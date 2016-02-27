@@ -1,4 +1,8 @@
 {% set app_dir = "/var/www/ladder" %}
+remove_apache:
+    pkg.purged:
+        - name: apache2
+
 nginx-full:
   pkg.installed
 
@@ -19,7 +23,7 @@ nginx-full:
 /etc/nginx/sites-enabled/ladder.conf:
   file:
     - managed
-    - source: salt://webserver/nginx.conf
+    - source: salt://webserver/ladder.conf
     - require:
       - pkg: nginx-full
 

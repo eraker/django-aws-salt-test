@@ -22,7 +22,6 @@ venv_ownership:
         - user: ladder
         - group: ladder
         - source: salt://application/ladder
-        - include_empty: True
         - recurse:
             - user
             - group

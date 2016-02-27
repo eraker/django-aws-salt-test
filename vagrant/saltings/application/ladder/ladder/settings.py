@@ -11,11 +11,11 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
-import json
+import yaml
 
 SECRETS_LOCATION = os.environ['SECRETS_LOCATION']
 with open(SECRETS_LOCATION, "r") as f:
-    secrets = json.loads(f.read())
+    secrets = yaml.load(f.read())
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'counter'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -83,7 +84,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': secrets["DJANGO_DB_NAME"],
-        'USER': secrets["DJANGO_DB_NAME"],
+        'USER': secrets["DJANGO_DB_USER"],
         'PASSWORD': secrets["DJANGO_DB_PASSWD"],
         'HOST': secrets["DJANGO_DB_HOST"],
         'PORT': secrets["DJANGO_DB_PORT"]
