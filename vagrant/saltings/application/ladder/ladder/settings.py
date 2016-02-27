@@ -90,6 +90,15 @@ DATABASES = {
         'PORT': secrets["DJANGO_DB_PORT"]
     }
 }
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '{host}:{port}'.format(
+            host=secrets["DJANGO_CACHE_HOST"],
+            port="11211"
+        ),
+    }
+}
 
 
 # Password validation

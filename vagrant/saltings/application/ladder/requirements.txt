@@ -27,6 +27,7 @@ pyasn1==0.1.9
 pyasn1-modules==0.0.8
 pychalk==1.1.0
 pycparser==2.14
+python-memcached==1.57
 pytz==2015.7
 service-identity==14.0.0
 sexpdata==0.0.3
