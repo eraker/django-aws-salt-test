@@ -2,7 +2,7 @@ Django==1.9.2
 Jinja2==2.8
 MarkupSafe==0.23
 PyYAML==3.11
-git+git://github.com/twisted/twisted.git@trunk
+git+git://github.com/twisted/twisted.git@master
 git+git://github.com/hendrix/hendrix.git@master
 amqp==1.4.9
 anyjson==0.3.3
