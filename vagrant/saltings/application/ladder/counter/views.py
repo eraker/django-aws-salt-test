@@ -6,7 +6,8 @@ from django.shortcuts import render
 
 from . import models
 
-
+# Use increment method:
+# http://php.net/manual/en/memcache.increment.php
 def cache_counter(request):
     key = "cacheCounter"
     result = cache.get(key)
